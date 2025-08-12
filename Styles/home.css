@@ -1,0 +1,61 @@
+/* Fondo negro con estrellas */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* textura estrellas */
+    background-repeat: repeat;
+    background-size: auto;
+    color: white;
+    display: flex;
+}
+
+/* Menú lateral */
+.sidebar {
+    width: 250px;
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.sidebar h2 {
+    margin-top: 10px;
+}
+
+/* Botones de navegación */
+.sidebar button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar button:hover {
+    background-color: #444;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}

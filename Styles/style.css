@@ -1,0 +1,138 @@
+/* Fondo general con degradado */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #0d1b2a, #1b263b, #000814);
+    color: #e0e1dd;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Capa de estrellas */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+}
+
+/* Crear varias estrellas usando box-shadow */
+.stars:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        20px 30px white, 50px 80px white, 120px 150px white, 
+        200px 220px white, 300px 100px white, 400px 300px white,
+        600px 200px white, 700px 150px white, 800px 250px white,
+        900px 350px white, 1000px 100px white, 1100px 300px white;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+/* Efecto parpadeo */
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Contenedor principal */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 350px;
+    padding: 30px;
+    background: rgba(27, 38, 59, 0.95);
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #f1faee;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #a8dadc;
+}
+
+/* Campos de texto */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: none;
+    background-color: #415a77;
+    color: white;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+input:focus {
+    background-color: #577590;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #778da9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #577590;
+    transform: scale(1.03);
+}
+
+/* Botón Google */
+.google-btn {
+    background-color: #db4437;
+}
+
+.google-btn:hover {
+    background-color: #a33327;
+}
+
+/* Enlaces */
+a {
+    color: #8ecae6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #219ebc;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

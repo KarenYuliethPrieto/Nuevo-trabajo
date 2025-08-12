@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <img src="https://via.placeholder.com/80" alt="Foto de perfil">
+        <h2>Usuario</h2>
+        <button onclick="mostrarSeccion('libros')">📚 Libros</button>
+        <button onclick="mostrarSeccion('peliculas')">🎬 Películas</button>
+        <button onclick="mostrarSeccion('musica')">🎵 Música</button>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <div id="libros" class="seccion">
+            <h2>Libros</h2>
+            <div class="card">
+                <h3>El Principito</h3>
+                <p><b>Autor:</b> Antoine de Saint-Exupéry</p>
+                <p><b>Fecha de publicación:</b> 1943</p>
+                <p><b>Género:</b> Fábula</p>
+            </div>
+        </div>
+
+        <div id="peliculas" class="seccion" style="display:none;">
+            <h2>Películas</h2>
+            <div class="card">
+                <h3>Inception</h3>
+                <p><b>Director:</b> Christopher Nolan</p>
+                <p><b>Fecha:</b> 2010</p>
+                <p><b>Género:</b> Ciencia ficción</p>
+            </div>
+        </div>
+
+        <div id="musica" class="seccion" style="display:none;">
+            <h2>Música</h2>
+            <div class="card">
+                <h3>Bohemian Rhapsody</h3>
+                <p><b>Artista:</b> Queen</p>
+                <p><b>Fecha:</b> 1975</p>
+                <p><b>Género:</b> Rock</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.seccion').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+

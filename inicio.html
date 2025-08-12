@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles/inicio.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="moon"></div>
+
+    <div class="layout">
+        <!-- Menú lateral -->
+        <aside class="sidebar">
+            <div class="user-info">
+                <img id="user-photo" src="https://via.placeholder.com/80" alt="Usuario">
+                <h2 id="user-name">Usuario</h2>
+                <p id="user-email">correo@ejemplo.com</p>
+            </div>
+            <nav>
+                <button class="menu-btn" data-section="libros">📚 Libros</button>
+                <button class="menu-btn" data-section="peliculas">🎬 Películas</button>
+                <button class="menu-btn" data-section="musica">🎵 Música</button>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <h1 id="section-title">Recomendaciones</h1>
+            <input type="text" id="search" placeholder="Buscar...">
+            <div class="cards-container" id="cards-container">
+                <!-- Aquí van las tarjetas dinámicamente -->
+            </div>
+        </main>
+    </div>
+
+    <script src="inicio.js"></script>
+</body>
+</html>
